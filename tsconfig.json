@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["DOM", "ESNext", "DOM.Iterable"],
+    "module": "CommonJS",
+    "jsx": "react",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "useDefineForClassFields": true,
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"], 
+      "components/*": [
+        "src/components/*"
+      ]
+    }
+  },
+  "include": ["./src"]
+}
