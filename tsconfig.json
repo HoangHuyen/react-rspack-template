@@ -2,17 +2,23 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["DOM", "ESNext", "DOM.Iterable"],
-    "module": "CommonJS",
-    "jsx": "react",
     "allowJs": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "isolatedModules": true,
-    "resolveJsonModule": true,
+    "strict": true,
+    "checkJs": true,
+    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "declaration": false,
+    "rootDir": "./src",
+    "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"], 
@@ -21,5 +27,10 @@
       ]
     }
   },
-  "include": ["./src"]
+  "include": ["src/**/*"],
+  "ts-node": {
+    "swc": true,
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }

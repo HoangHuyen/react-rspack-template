@@ -1,13 +1,20 @@
-import React from "react";
-import "./App.css";
+import "./styles.css";
 
-const App = () => {
+import React, { useEffect, useState } from "react";
+import { Provider as ReduxProvider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import { NextUIProvider } from "@nextui-org/react";
+import AppRoutes from "@src/routes";
+import { store } from "@src/model/store";
+
+export const App = () => {
   return (
-    <div className="content">
-      <h1>Rsbuild with React</h1>
-      <p>Start building amazing things with Rsbuild.</p>
-    </div>
+    <NextUIProvider>
+      <BrowserRouter>
+        <ReduxProvider store={store}>
+          <AppRoutes />
+        </ReduxProvider>
+      </BrowserRouter>
+    </NextUIProvider>
   );
 };
-
-export default App;
